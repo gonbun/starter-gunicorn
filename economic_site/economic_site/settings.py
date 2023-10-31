@@ -17,8 +17,6 @@ import os
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
-CYCLIC_URL = os.environ.get("CYCLIC_URL")
-
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/4.1/howto/deployment/checklist/
 
@@ -28,7 +26,7 @@ SECRET_KEY = 'django-insecure-uhn(n^#8$-+(3(odiyxlq$zhb5xmtxjj)6x$qf^#$dle#)pu69
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = [CYCLIC_URL]
+ALLOWED_HOSTS = list(os.environ.get('ALLOWED_HOSTS','localhost').split(' '))
 
 
 # Application definition
