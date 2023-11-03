@@ -26,9 +26,9 @@ SECRET_KEY = 'django-insecure-uhn(n^#8$-+(3(odiyxlq$zhb5xmtxjj)6x$qf^#$dle#)pu69
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = list(os.environ.get('ALLOWED_HOSTS','localhost').split(' '))
-
-
+ALLOWED_HOSTS = list(os.environ.get('ALLOWED_HOSTS','localhost 127.0.0.1').split(' '))
+CYCLIC_DB = os.environ.get('CYCLIC_DB','splendid-puce-coyoteCyclicDB')
+AWS_REGION = os.environ.get('AWS_REGION','ap-northeast-1')
 # Application definition
 
 INSTALLED_APPS = [

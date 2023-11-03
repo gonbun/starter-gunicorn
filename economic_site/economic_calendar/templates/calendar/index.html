@@ -5,8 +5,31 @@
     <title>Simple BBS</title>
 </head>
 <body>
-    <ul>
-            <li>{{ messages }} </li>
-    </ul>
+    <table border="1">
+        <tr>
+            <th>date</th>
+            <th>time</th>
+            <th>importance</th>
+            <th>zone</th>
+            <th>currency</th>
+            <th>event</th>
+            <th>actual</th>
+            <th>forecast</th>
+            <th>previous</th>
+        </tr>
+        {% for l in Items %}
+        <tr>
+            <td>{{ l.pk }} </td>
+            <td>{{ l.time }} </td>
+            <td>{{ l.importance }} </td>
+            <td>{{ l.zone }} </td>
+            <td>{{ l.currency }} </td>
+            <td>{{ l.event }} </td>
+            <td>{{ l.actual }} </td>
+            <td>{{ l.forecast }} </td>
+            <td>{{ l.previous }} </td>
+        </tr>
+        {% endfor %}
+    </table>
 </body>
 </html>
